@@ -1,0 +1,14 @@
+.app {
+  align-items: center;
+  background: #eee;
+  display: flex;
+  flex: 1 1 100%;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.app__page {
+  color: #444;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}

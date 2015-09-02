@@ -1,0 +1,12 @@
+/** External modules */
+@import '../node_modules/normalize.css/normalize.css';
+
+/** Components */
+@import "./components/App/App.css";
+
+html,
+body,
+.main {
+  width: 100%;
+  height: 100%;
+}
