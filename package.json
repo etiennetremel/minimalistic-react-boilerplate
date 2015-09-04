@@ -5,17 +5,16 @@
   "main": "src/main.js",
   "scripts": {
     "browser-sync": "browser-sync start --server build --files=\"build/\"",
-    "build": "npm run css:build & npm run css:minify",
-    "css:build": "cssnext src/main.css build/assets/bundle.css",
-    "css:minify": "cssnano build/assets/bundle.css build/assets/bundle.css",
-    "css:watch": "cssnext -w src/main.css build/assets/bundle.css",
+    "build": "npm run css:build & npm run js:build && npm run js:minify",
+    "css:build": "cssnext --compress src/main.css build/assets/bundle.css",
+    "css:watch": "cssnext --sourcemap --watch src/main.css build/assets/bundle.css",
     "js:build": "browserify src/main.js -t babelify -o build/assets/bundle.js",
     "js:minify": "uglifyjs build/assets/bundle.js -o build/assets/bundle.js",
     "js:watch": "watchify -v -t babelify -o build/assets/bundle.js src/main.js",
-    "lint": "eslint ./**/*.js",
-    "start": "npm run build & npm run watch | npm run browser-sync",
+    "lint": "eslint src && eslint test",
+    "start": "npm run watch & npm run browser-sync",
     "test": "mocha --compilers js:babel/register --reporter spec --recursive",
-    "watch": "npm run css:watch | npm run js:watch"
+    "watch": "npm run css:watch & npm run js:watch"
   },
   "author": "Etienne Tremel",
   "license": "MIT",
