@@ -10,7 +10,7 @@ __Features:__
 * CSSNext and CSSNano
 * Linting
 * Unit tests using Mocha/Chai
-* Docker image ready to be deployed
+* Docker image with NGINX ready to be deployed
 
 ### Start developing
 
@@ -28,4 +28,16 @@ npm run build
 
 ```bash
 npm test
+```
+
+### Build and run Docker image
+
+Docker image is based on NGINX to serve static files from the build directory.
+
+```bash
+# Build Docker image
+docker build -t my-image .
+
+# Run image
+docker run -t -i -p 80:80 my-image
 ```
