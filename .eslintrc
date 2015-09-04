@@ -23,14 +23,6 @@
     "templateStrings": true,
     "jsx": true
   },
-  "globals": {
-    "__base": true,
-    "assert": true,
-    "expect": true,
-    "React": true,
-    "sinon": true,
-    "TestUtils": true
-  },
 
   "plugins": [
     "react"
@@ -157,11 +149,7 @@
     }],
     "new-cap": [2, { // http://eslint.org/docs/rules/new-cap
       "newIsCap": true,
-      "capIsNewExceptions": [
-        "ImmutableStore",
-        "List",
-        "Map"
-      ]
+      "capIsNewExceptions": []
     }],
     "no-multiple-empty-lines": [2, { // http://eslint.org/docs/rules/no-multiple-empty-lines
       "max": 2
@@ -170,7 +158,7 @@
     "no-new-object": 2, // http://eslint.org/docs/rules/no-new-object
     "no-spaced-func": 2, // http://eslint.org/docs/rules/no-spaced-func
     "no-trailing-spaces": 2, // http://eslint.org/docs/rules/no-trailing-spaces
-    "no-extra-parens": 2, // http://eslint.org/docs/rules/no-extra-parens
+    "no-extra-parens": [2, "functions"], // http://eslint.org/docs/rules/no-extra-parens
     "no-underscore-dangle": 0, // http://eslint.org/docs/rules/no-underscore-dangle
     "one-var": [2, "never"], // http://eslint.org/docs/rules/one-var
     "padded-blocks": [2, "never"], // http://eslint.org/docs/rules/padded-blocks
@@ -187,7 +175,7 @@
     "spaced-comment": 2, // http://eslint.org/docs/rules/spaced-comment
 
     /**
-     * eslint-plugin-react ( https://github.com/yannickcr/eslint-plugin-react )
+     * eslint-plugin-react (https://github.com/yannickcr/eslint-plugin-react)
      */
     "react/display-name": 1,
     "react/jsx-boolean-value": 1,
