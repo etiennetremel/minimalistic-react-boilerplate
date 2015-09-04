@@ -1,7 +1,5 @@
-import React from 'react';
 import App from './components/App';
+import React from 'react';
 
-const el = document.createElement('div');
-el.className = 'main';
-document.body.appendChild(el);
-React.render(<App />, el);
+// Render Application
+React.render(<App />, document.getElementById('main'));

@@ -1,12 +1,53 @@
 /** External modules */
 @import '../node_modules/normalize.css/normalize.css';
 
+/** Variables */
+:root {
+  --primary: #61dafb;
+  --dark: #2d2d2d;
+  --darker: #222;
+}
+
 /** Components */
 @import "./components/App/App.css";
 
 html,
-body,
-.main {
-  width: 100%;
+body {
   height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+ * Header
+ */
+.master-header {
+  align-items: center;
+  background: var(--darker);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.master-header__logo {
+  width: 100px;
+}
+
+.master-header__brand {
+  color: #fff;
+  font-size: 30px;
+}
+
+/**
+ * Viewport
+ */
+.master-viewport {
+  background: var(--dark);
+  flex: auto;
+  display: flex;
 }
