@@ -6,7 +6,7 @@ Why not using [React Starter Kit](https://github.com/kriasoft/react-starter-kit)
 __Features:__
 
 * Babel ES6
-* React 0.13.2
+* React 0.14.3
 * CSSNext and CSSNano
 * Linting
 * Unit tests using Mocha/Chai
